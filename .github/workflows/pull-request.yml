@@ -8,6 +8,10 @@ jobs:
   commit-lint:
     name: Conventional Commits validation
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
