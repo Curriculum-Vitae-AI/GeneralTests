@@ -15,8 +15,14 @@ jobs:
       - name: Validate commit messages
         id: commit-validation
         run: |
+
           types=("build" "chore" "ci" "docs" "feat" "fix" "perf" "refactor" "revert" "style" "test")
-          commits=$(git log --pretty=format:%s FETCH_HEAD^..FETCH_HEAD)
+          
+          const commits = await github.pulls.listCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
           isValid = true
 
           # TO REMOVE
