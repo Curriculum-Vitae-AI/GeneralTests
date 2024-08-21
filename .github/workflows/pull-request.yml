@@ -16,7 +16,7 @@ jobs:
         id: commit-validation
         run: |
           types=("build" "chore" "ci" "docs" "feat" "fix" "perf" "refactor" "revert" "style" "test")
-          commits=$(git log --pretty=format:%s origin/main..HEAD)
+          commits=$(git log --pretty=format:%s FETCH_HEAD^..FETCH_HEAD)
           isValid = true
 
           # TO REMOVE
