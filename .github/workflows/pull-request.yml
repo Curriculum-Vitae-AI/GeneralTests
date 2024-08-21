@@ -15,7 +15,6 @@ jobs:
       - name: Validate commit messages
         id: commit-validation
         run: |
-
           PR_NUMBER=${{ github.event.pull_request.number }}
           REPO=${{ github.repository }}
           TOKEN=${{ secrets.GITHUB_TOKEN }}
@@ -26,29 +25,36 @@ jobs:
             "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/commits" \
             | jq -r '.[].commit.message')
           
-          isValid = true
+          isValid=true
 
-          # TO REMOVE
-          echo commits
-
-          for commit in $commits; do
+          # Process each commit message
+          while IFS= read -r commit; do
+            # Extract type and message
             type=$(echo "$commit" | cut -d': ' -f1)
             message=$(echo "$commit" | cut -d': ' -f2-)
 
+            # Validate the type
             if [[ ! " ${types[@]} " =~ " ${type} " ]]; then
               echo "Commit type is invalid for commit: $commit"
-              isValid = false
+              isValid=false
             fi
 
-            if [[ ! $message =~ ^[a-z ]{1,49}$ ]]; then
-              echo "Commit message is not in lowercase or length is greater than 50."
-              isValid = false
+            # Validate the message
+            if [[ ! $message =~ ^[a-z ]{1,50}$ ]]; then
+              echo "Commit message is not in lowercase or length is greater than 50 for commit: $commit"
+              isValid=false
             fi
             
-          done
+          done <<< "$commits"
+
+          # Exit with non-zero status if validation failed
+          if [ "$isValid" = false ]; then
+            echo "Commit validation failed"
+            exit 1
+          fi
 
       - name: Comment on PR if commit messages are invalid
-        if: env.isValid == 'false'
+        if: failure()
         uses: actions/github-script@v6
         with:
           script: |
