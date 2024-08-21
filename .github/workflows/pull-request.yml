@@ -12,17 +12,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Get commit messages
+        id: get-commits
+        uses: octokit/request-action@v2.1.1
+        with:
+          route: GET /repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/commits
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Validate commit messages
         id: commit-validation
         run: |
 
           types=("build" "chore" "ci" "docs" "feat" "fix" "perf" "refactor" "revert" "style" "test")
           
-          const commits = await github.pulls.listCommits({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-            });
+          commits=$(echo "${{ steps.get-commits.outputs.data }}" | jq -r '.[].commit.message')
+          
           isValid = true
 
           # TO REMOVE
