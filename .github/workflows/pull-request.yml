@@ -12,20 +12,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Get commit messages
-        id: get-commits
-        uses: octokit/request-action@v2.1.1
-        with:
-          route: GET /repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/commits
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Validate commit messages
         id: commit-validation
         run: |
 
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          REPO=${{ github.repository }}
+          TOKEN=${{ secrets.GITHUB_TOKEN }}
+
           types=("build" "chore" "ci" "docs" "feat" "fix" "perf" "refactor" "revert" "style" "test")
           
-          commits=$(echo "${{ steps.get-commits.outputs.data }}" | jq -r '.[].commit.message')
+          commits=$(curl -s -H "Authorization: token $TOKEN" \
+            "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/commits" \
+            | jq -r '.[].commit.message')
           
           isValid = true
 
