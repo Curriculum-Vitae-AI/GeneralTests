@@ -28,7 +28,7 @@ jobs:
           echo 'TESTE'
         
           api_response=$(curl -s -H "Authorization: token $TOKEN" \
-            "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/commits").[].commit
+            "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/commits").[].commit.message
           
           echo "$api_response"
           
