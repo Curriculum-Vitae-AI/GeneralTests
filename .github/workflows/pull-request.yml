@@ -6,7 +6,7 @@ on:
 
 jobs:
   commit-lint:
-    name: Conventional Commits validation
+    name: ConventionalCommits Validation
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -33,5 +33,8 @@ jobs:
           isValid=true
 
           while IFS= read -r commit; do
-            echo "$commit"
+            type=$(echo "$commit" | cut -d': ' -f1)
+            message=$(echo "$commit" | cut -d': ' -f2-)
+            echo "Type: $type"
+            echo "Message: $message"
           done <<< "$commits"
