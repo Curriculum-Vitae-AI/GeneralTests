@@ -33,8 +33,14 @@ jobs:
           isValid=true
 
           while IFS= read -r commit; do
-            type=$(echo "$commit" | cut -d': ' -f1)
-            message=$(echo "$commit" | cut -d': ' -f2-)
-            echo "Type: $type"
-            echo "Message: $message"
+            if [[ "$commit" == *": "* ]]; then
+              type=$(echo "$commit" | cut -d': ' -f1)
+              message=$(echo "$commit" | cut -d': ' -f2-)
+              echo "Type: $type"
+              echo "Message: $message"
+            else
+              echo "Commit message does not contain ': ': $commit"
+              isValid=false    
+            fi
+          
           done <<< "$commits"
