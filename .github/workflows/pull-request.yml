@@ -32,6 +32,6 @@ jobs:
           
           isValid=true
 
-          for commit in $commits; do
+          while IFS= read -r commit; do
             echo "$commit"
-          done
+          done <<< "$commits"
