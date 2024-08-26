@@ -39,6 +39,8 @@ jobs:
               if [[ ! " ${types[*]} " != *" $type "* ]]; then
                 echo "Type is not a valid one."
                 isValid=false
+              else
+                echo "Valid type"
               fi
               
               message=$(echo "$commit" | awk -F': ' '{print $2}')
@@ -48,6 +50,8 @@ jobs:
               echo "Commit message does not contain ': ': $commit"
               isValid=false    
             fi            
+            
+          done <<< "$commits"
 
           echo "isValid: $isValid"
-          done <<< "$commits"
+          
