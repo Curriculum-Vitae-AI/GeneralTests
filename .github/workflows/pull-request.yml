@@ -34,13 +34,20 @@ jobs:
 
           while IFS= read -r commit; do
             if [[ "$commit" == *": "* ]]; then
+              
               type=$(echo "$commit" | awk -F': ' '{print $1}')
+              if [[ " ${types[*]} " != *" $type "* ]]; then
+                echo "Type is not a valid one."
+                isValid=false
+              fi
+              
               message=$(echo "$commit" | awk -F': ' '{print $2}')
-              echo "Type: $type"
               echo "Message: $message"
+              
             else
               echo "Commit message does not contain ': ': $commit"
               isValid=false    
-            fi
-          
+            fi            
+
+          echo "isValid: $isValid"
           done <<< "$commits"
