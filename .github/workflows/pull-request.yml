@@ -36,7 +36,7 @@ jobs:
             if [[ "$commit" == *": "* ]]; then
               
               type=$(echo "$commit" | awk -F': ' '{print $1}')
-              if [[ " ${types[*]} " != *" $type "* ]]; then
+              if [[ ! " ${types[*]} " != *" $type "* ]]; then
                 echo "Type is not a valid one."
                 isValid=false
               fi
