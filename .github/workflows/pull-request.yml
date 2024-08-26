@@ -34,8 +34,8 @@ jobs:
 
           while IFS= read -r commit; do
             if [[ "$commit" == *": "* ]]; then
-              type=$(echo "$commit" | cut -d': ' -f1)
-              message=$(echo "$commit" | cut -d': ' -f2-)
+              type=$(echo "$commit" | awk -F': ' '{print $1}')
+              message=$(echo "$commit" | awk -F': ' '{print $2}')
               echo "Type: $type"
               echo "Message: $message"
             else
