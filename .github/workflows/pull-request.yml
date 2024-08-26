@@ -32,6 +32,6 @@ jobs:
           
           isValid=true
 
-          for commit in $commits do;
+          for commit in $commits; do
             echo "$commit"
           done
