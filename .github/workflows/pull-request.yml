@@ -47,7 +47,8 @@ jobs:
               if ! echo "$string" | grep -Eq '^[a-z ]+$'; then
                 echo "Message contains characters that are not space or lower case letters."
                 isValid=false
-              
+              fi
+            
             else
               echo "Commit message does not contain ': ': $commit"
               isValid=false    
