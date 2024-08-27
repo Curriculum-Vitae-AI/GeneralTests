@@ -63,7 +63,7 @@ jobs:
       - name: Close Pull Request (Commit validation)
         if: env.commitIsValid == 'false'
         run: |
-          gh pr close ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --comment "**Title:** ❌ Commit(s) Invalid.
+          gh pr close ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --comment "** ❌ Commit(s) Invalid **
            **Description:** The commit message is not in convetional commits pattern. Please refer to: https://www.conventionalcommits.org/pt-br/v1.0.0/"
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
