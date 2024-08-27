@@ -34,17 +34,19 @@ jobs:
 
           while IFS= read -r commit; do
             if [[ "$commit" == *": "* ]]; then
+
+              echo "Commit message: $commit"
               
               type=$(echo "$commit" | awk -F': ' '{print $1}')
               if [[ ! " ${types[*]} " == *" $type "* ]]; then
                 echo "Type is not a valid one."
                 isValid=false
-              else
-                echo "Valid type"
               fi
               
               message=$(echo "$commit" | awk -F': ' '{print $2}')
-              echo "Message: $message"
+              if ! echo "$string" | grep -Eq '^[a-z ]+$'; then
+                echo "Message contains characters that are not space or lower case letters."
+                isValid=false
               
             else
               echo "Commit message does not contain ': ': $commit"
