@@ -64,14 +64,14 @@ jobs:
         if: env.commitIsValid == 'false'
         run: |
           gh pr close ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --comment "## **❌ Commit(s) Invalid ❌**
-           **The commit message is not in convetional commits pattern. Please refer to: https://www.conventionalcommits.org/pt-br/v1.0.0/**"
+           The commit message is not in convetional commits pattern. Please refer to: https://www.conventionalcommits.org/pt-br/v1.0.0/"
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment (Commit validation)
         if: env.commitIsValid == 'true'
         run: |
-           gh pr comment ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --body "**Title:** ✅ Commit(s) are Valid..
-           **Description:** All the commits follow conventional commits pattern, PR not closed."
+           gh pr comment ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --body "## **✅ Commit(s) are Valid ✅**.
+           All the commits follow conventional commits pattern, PR not closed."
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
