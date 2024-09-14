@@ -1,4 +1,4 @@
-import "./styles/pages/CartaDeMotivacao.css"
+import "../styles/pages/CartaDeMotivacao.css";
 
 function CartaDeMotivacao(){
     return(

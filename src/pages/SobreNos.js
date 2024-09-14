@@ -1,4 +1,4 @@
-import "./styles/pages/SobreNos.css"
+import "../styles/pages/SobreNos.css";
 
 function SobreNos(){
     return(

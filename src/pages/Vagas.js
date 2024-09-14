@@ -1,4 +1,4 @@
-import "./styles/pages/Vagas.css"
+import "../styles/pages/Vagas.css";
 
 function Vagas(){
     return(
