@@ -1,0 +1,77 @@
+.Home {
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    padding: 3.125rem;
+    background: linear-gradient(#052D77, #1045A8);
+    border-radius: 30px;
+    color: white;
+    width: 90%;
+    max-width: 1096px;
+}
+
+.esquerda {
+    width: 50%;
+    max-width: 548px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    text-align: justify;
+    width: 80%;
+    max-width: 424px;
+    padding-bottom: 2rem;
+    font-size: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 15px 40px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.direita {
+    width: 50%;
+    max-width: 548px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.imgRoadmap {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .Home{
+        padding: 1rem 2.5rem;
+    }
+
+    .card {
+        width: 100%;
+      padding: 1rem;
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+  
+    .esquerda, .direita {
+      width: 100%; /* Make both divs full width on smaller screens */
+    }
+    p{
+        padding-bottom: 1rem;
+    }
+  }

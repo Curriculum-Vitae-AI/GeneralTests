@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1.25rem;
 }
 
 button {
@@ -21,3 +22,9 @@ button {
     display: flex;
     gap: 40px;
 }
+
+@media (max-width: 768px) {
+    .Navbar {
+        padding-bottom: 0.625rem;
+    }
+  }
