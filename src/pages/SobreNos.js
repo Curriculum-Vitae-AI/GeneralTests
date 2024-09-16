@@ -35,7 +35,7 @@ function SobreNos(){
                     </p>
                 </div>
                 <div className="direitaSobreNos">
-                    <img className="imgSobreNos" src={ImgSobreNos} />
+                    <img className="imgSobreNos" src={ImgSobreNos} alt="Imagem de Sobre Nós" />
                 </div>
             </div>
         </div>

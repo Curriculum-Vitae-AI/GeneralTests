@@ -9,7 +9,7 @@ function Navbar(){
     return(
         <div className="Navbar">
             <button className="Logo"> 
-                <Link to="/"><img src={Logo}/></Link>
+                <Link to="/"><img src={Logo} alt="Logo"/></Link>
             </button>
             <div className="Botoes">
                 <button className={`btn ${location.pathname === '/Roadmap' ? 'active' : ''}`}>

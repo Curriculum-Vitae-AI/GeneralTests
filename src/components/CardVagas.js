@@ -1,29 +1,27 @@
-import imgRoadmap from "../assets/Home/imgRoadmap.svg"
+import imgVagas from "../assets/Home/imgVagas.svg"
 import { useNavigate } from 'react-router-dom';
-import "../styles/components/CardRoadmap.css"
+import "../styles/components/CardVagas.css"
 
 function CardVagas(){
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/Roadmap');
+        navigate('/Vagas');
     };
+    
     return(
-        <div className="">
-            <div className="cardRoadmap">
+        <div className="cardVagas">
             <div className="esquerda">
-                    <h1>VAGAS</h1>
-                    <p className="textHome">Com nosso gerador de roadmaps
-                        você somente precisa indicar a sua
-                        vaga desejada e ele irá montar um
-                        plano de estudos para que você
-                        possa focar somente no aprendizado.
-                    </p>
-                    <button onClick={handleClick} className="btnGerar">GERAR</button>
-                </div>
+                <h1>VAGAS</h1>
+                <p className="textVagas">
+                    Utilizando conexão com o Chat GPT você pode informar 
+                    a área que você quer trabalhar, sua experiência e ele 
+                    indicará para você as melhores vagas que se encaixam para você.
+                </p>
+                <button onClick={handleClick} className="btnGerar">GERAR</button>
+            </div>
                 <div className="direita">
-                    <img src={imgRoadmap} className="imgRoadmap" />
-                </div>
+                    <img src={imgVagas} className="imgVagas" alt="Imagem de vagas"/>
             </div>
         </div>
     );

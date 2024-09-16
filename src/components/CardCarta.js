@@ -1,29 +1,28 @@
-import imgRoadmap from "../assets/Home/imgRoadmap.svg"
+import imgCarta from "../assets/Home/imgCarta.svg"
 import { useNavigate } from 'react-router-dom';
-import "../styles/components/CardRoadmap.css"
+import "../styles/components/CardCarta.css"
 
 function CardCarta(){
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/Roadmap');
+        navigate('/CartaDeMotivacao');
     };
+
     return(
-        <div className="">
-            <div className="cardRoadmap">
-            <div className="esquerda">
-                    <h1>CARTA DE MOTIVAÇÃO</h1>
-                    <p className="textHome">Com nosso gerador de roadmaps
-                        você somente precisa indicar a sua
-                        vaga desejada e ele irá montar um
-                        plano de estudos para que você
-                        possa focar somente no aprendizado.
-                    </p>
-                    <button onClick={handleClick} className="btnGerar">GERAR</button>
-                </div>
-                <div className="direita">
-                    <img src={imgRoadmap} className="imgRoadmap" />
-                </div>
+        <div className="cardCarta">
+            <div className="esquerdaCarta">
+                <h1 className="tituloCarta">CARTA DE MOTIVAÇÃO</h1>
+                <p className="textCarta">
+                    Com nosso gerador de carta de motivação basta você indicar 
+                    suas experiências e a vaga a qual quer se candidatar que o  
+                    programa irá gerar uma carta com todas  suas informações e o 
+                    porque de você ser o candidato ideal para a vaga!
+                </p>
+                <button onClick={handleClick} className="btnGerar">GERAR</button>
+            </div>
+            <div className="direitaCarta">
+                <img src={imgCarta} className="imgCarta" alt="Imagem de Carta de Motivação"/>
             </div>
         </div>
     );

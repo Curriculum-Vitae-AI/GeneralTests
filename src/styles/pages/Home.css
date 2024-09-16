@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.card {
+.cardHome {
     display: flex;
     padding: 3.125rem;
     background: linear-gradient(#052D77, #1045A8);
@@ -15,91 +15,36 @@
     max-width: 1096px;
 }
 
-.esquerda {
-    width: 50%;
-    max-width: 548px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.textHome {
-    text-align: justify;
-    width: 80%;
-    max-width: 424px;
-    padding-bottom: 2rem;
-    font-size: 25px;
-}
-
-.btnGerar {
-    border: none;
-    border-radius: 5px;
-    padding: 15px 40px;
-    cursor: pointer;
-    background-color: white;
-    font-weight: bolder;
-    font-size: 15px;
-}
-
-.direita {
-    width: 50%;
-    max-width: 548px;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-}
-
-.imgRoadmap {
-    padding: 10px;
-    width: 80%;
-    max-width: 500px;
-}
-
-@media (max-width: 768px) {
-    .Home{
-        padding: 1rem 2.5rem;
-    }
-
-    .card {
-        width: 100%;
-        padding: 1rem;
-        flex-direction: column; 
-    }
-  
-    .esquerda, .direita {
-      width: 100%; 
-    }
-    .textHome{
-        padding-bottom: 1rem;
-    }
-  }
-
-  .carousel {
+.carousel {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-  }
+}
   
-  .carousel-item {
+.carouselItem {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     margin: 0 10px;
-  }
+}
   
-  .carousel-button {
-    background-color: #007bff;
-    color: white;
+.carouselBtn {
     border: none;
     padding: 10px;
     cursor: pointer;
-  }
+}
   
-  .carousel-button:hover {
-    background-color: #0056b3;
-  }
-  
+@media (max-width: 768px) {
+    .Home{
+        padding: 1rem 2.5rem;
+    }
+
+    .cardHome {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column; 
+    }
+}

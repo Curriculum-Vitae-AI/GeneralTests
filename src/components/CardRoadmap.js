@@ -8,22 +8,22 @@ function CardRoadmap(){
     const handleClick = () => {
         navigate('/Roadmap');
     };
+
     return(
-        <div className="">
-            <div className="cardRoadmap">
+        <div className="cardRoadmap">
             <div className="esquerda">
-                    <h1>ROADMAP</h1>
-                    <p className="textHome">Com nosso gerador de roadmaps
-                        você somente precisa indicar a sua
-                        vaga desejada e ele irá montar um
-                        plano de estudos para que você
-                        possa focar somente no aprendizado.
-                    </p>
-                    <button onClick={handleClick} className="btnGerar">GERAR</button>
-                </div>
-                <div className="direita">
-                    <img src={imgRoadmap} className="imgRoadmap" />
-                </div>
+                <h1 className="textTitulo">ROADMAP</h1>
+                <p className="textRoadmap">
+                    Com nosso gerador de roadmaps
+                    você somente precisa indicar a sua
+                    vaga desejada e ele irá montar um
+                    plano de estudos para que você
+                    possa focar somente no aprendizado.
+                </p>
+                <button onClick={handleClick} className="btnGerar">GERAR</button>
+            </div>
+            <div className="direita">
+                <img src={imgRoadmap} className="imgRoadmap" alt="Imagem de Roadmap"/>
             </div>
         </div>
     );
