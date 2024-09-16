@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/DevopsTesting/static/css/main.0a7681b9.css",
-    "main.js": "/DevopsTesting/static/js/main.59ebe5ff.js",
-    "static/js/453.5d6e173a.chunk.js": "/DevopsTesting/static/js/453.5d6e173a.chunk.js",
-    "static/media/ImgSobreNos.svg": "/DevopsTesting/static/media/ImgSobreNos.030b0857d51310034ad7b48ac385a851.svg",
-    "static/media/imgRoadmap.svg": "/DevopsTesting/static/media/imgRoadmap.de296ec7a0aa350f3849749a77ebb5b3.svg",
-    "static/media/Logo.svg": "/DevopsTesting/static/media/Logo.e7196783a85974b55bb95a34c4d38158.svg",
-    "static/media/imgCarta.svg": "/DevopsTesting/static/media/imgCarta.c04080c8f3f9a46d8072a19cfdce3a93.svg",
-    "static/media/imgVagas.svg": "/DevopsTesting/static/media/imgVagas.7a145cf47feb2c6bb627ee1a1d79fc82.svg",
-    "static/media/flechaEsquerda.svg": "/DevopsTesting/static/media/flechaEsquerda.64143e08447ea3d99792d55a3e9d3f51.svg",
-    "static/media/flechaDireita.svg": "/DevopsTesting/static/media/flechaDireita.2efd7c923db714e0b0fc354326431abf.svg",
-    "index.html": "/DevopsTesting/index.html",
-    "main.0a7681b9.css.map": "/DevopsTesting/static/css/main.0a7681b9.css.map",
-    "main.59ebe5ff.js.map": "/DevopsTesting/static/js/main.59ebe5ff.js.map",
-    "453.5d6e173a.chunk.js.map": "/DevopsTesting/static/js/453.5d6e173a.chunk.js.map"
+    "main.css": "/GeneralTests/static/css/main.0a7681b9.css",
+    "main.js": "/GeneralTests/static/js/main.7ab06370.js",
+    "static/js/453.5d6e173a.chunk.js": "/GeneralTests/static/js/453.5d6e173a.chunk.js",
+    "static/media/ImgSobreNos.svg": "/GeneralTests/static/media/ImgSobreNos.030b0857d51310034ad7b48ac385a851.svg",
+    "static/media/imgRoadmap.svg": "/GeneralTests/static/media/imgRoadmap.de296ec7a0aa350f3849749a77ebb5b3.svg",
+    "static/media/Logo.svg": "/GeneralTests/static/media/Logo.e7196783a85974b55bb95a34c4d38158.svg",
+    "static/media/imgCarta.svg": "/GeneralTests/static/media/imgCarta.c04080c8f3f9a46d8072a19cfdce3a93.svg",
+    "static/media/imgVagas.svg": "/GeneralTests/static/media/imgVagas.7a145cf47feb2c6bb627ee1a1d79fc82.svg",
+    "static/media/flechaEsquerda.svg": "/GeneralTests/static/media/flechaEsquerda.64143e08447ea3d99792d55a3e9d3f51.svg",
+    "static/media/flechaDireita.svg": "/GeneralTests/static/media/flechaDireita.2efd7c923db714e0b0fc354326431abf.svg",
+    "index.html": "/GeneralTests/index.html",
+    "main.0a7681b9.css.map": "/GeneralTests/static/css/main.0a7681b9.css.map",
+    "main.7ab06370.js.map": "/GeneralTests/static/js/main.7ab06370.js.map",
+    "453.5d6e173a.chunk.js.map": "/GeneralTests/static/js/453.5d6e173a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a7681b9.css",
-    "static/js/main.59ebe5ff.js"
+    "static/js/main.7ab06370.js"
   ]
 }
