@@ -1,0 +1,7 @@
+.cardRoadmap {
+    display: flex;
+    background: linear-gradient(#052D77, #1045A8);
+    border-radius: 30px;
+    color: white;
+    width: 100%;
+}
