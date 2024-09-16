@@ -16,7 +16,7 @@ function Navbar(){
                     <Link id="link" to="/Roadmap">ROADMAP</Link>
                 </button>
                 <button className={`btn ${location.pathname === '/CartaDeMotivacao' ? 'active' : ''}`}>
-                    <Link id="link" to="/CartaDeMotivacao">CARTA DE MOTIVAÇÃO</Link>
+                    <Link id="link" to="/CartaDeMotivacao">CARTA DE MOTIVAÇAO</Link>
                 </button>
                 <button className={`btn ${location.pathname === '/Vagas' ? 'active' : ''}`}>
                     <Link id="link" to="/Vagas">VAGAS</Link> 
