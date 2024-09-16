@@ -1,7 +1,7 @@
 {
   "name": "teste",
   "version": "0.1.0",
-  "homepage": "https://curriculum-vitae-ai.github.io/DevopsTesting/",
+  "homepage": "https://curriculum-vitae-ai.github.io/GeneralTests/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
