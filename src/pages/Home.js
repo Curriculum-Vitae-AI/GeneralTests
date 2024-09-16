@@ -14,7 +14,7 @@ function Home() {
             <div className="card">
                 <div className="esquerda">
                     <h1>ROADMAP</h1>
-                    <p>Com nosso gerador de roadmaps
+                    <p className="textHome">Com nosso gerador de roadmaps
                         você somente precisa indicar a sua
                         vaga desejada e ele irá montar um
                         plano de estudos para que você

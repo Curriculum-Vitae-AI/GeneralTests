@@ -20,7 +20,7 @@ button {
 }
 .Botoes {
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .btn.active {

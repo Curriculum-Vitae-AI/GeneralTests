@@ -2,7 +2,7 @@ import "../styles/pages/Vagas.css";
 
 function Vagas(){
     return(
-        <div className="Roadmap">
+        <div className="Vagas">
             <div>
                 <div>
                     <h1>Cargo desejado</h1>

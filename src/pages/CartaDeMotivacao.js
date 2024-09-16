@@ -2,7 +2,7 @@ import "../styles/pages/CartaDeMotivacao.css";
 
 function CartaDeMotivacao(){
     return(
-        <div className="Roadmap">
+        <div className="CartaDeMotivacao">
             <div>
                 <div>
                     <h1>Nome da empresa</h1>

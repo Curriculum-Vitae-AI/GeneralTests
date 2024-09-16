@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-p {
+.textHome {
     text-align: justify;
     width: 80%;
     max-width: 424px;
@@ -63,14 +63,14 @@ p {
 
     .card {
         width: 100%;
-      padding: 1rem;
-      flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 1rem;
+        flex-direction: column; 
     }
   
     .esquerda, .direita {
-      width: 100%; /* Make both divs full width on smaller screens */
+      width: 100%; 
     }
-    p{
+    .textHome{
         padding-bottom: 1rem;
     }
   }
