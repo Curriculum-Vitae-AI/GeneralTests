@@ -1,25 +1,24 @@
-.cardVagas {
+.card {
     display: flex;
-    width: 850px;
+    width: 900px;
 }
 
 .esquerda {
-    width: 50%;
-    max-width: 548px;
+    width: 450px;
+    height: 400px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.textTitulo{
+.titulo{
     font-size: 30px;
 }
 
-.textVagas {
+.texto {
     text-align: justify;
-    width: 80%;
-    max-width: 424px;
-    padding-bottom: 2rem;
+    width: 420px;
     font-size: 25px;
 }
 
@@ -35,22 +34,15 @@
 }
 
 .direita {
-    width: 50%;
-    max-width: 548px;
+    width: 450px;
     display: flex; 
     flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
-
-.imgVagas {
-    padding: 10px;
-    width: 70%;
-    max-width: 500px;
-}
   
 @media (max-width: 768px) {
-    .cardVagas {
+    .cardRoadmap {
         width: 100%;
         padding: 1rem;
         flex-direction: column; 
@@ -60,7 +52,7 @@
         width: 100%; 
     }
 
-    .textVagas {
+    .textRoadmap{
         padding-bottom: 1rem;
     }
 }
