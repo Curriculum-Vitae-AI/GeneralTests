@@ -1,6 +1,6 @@
 import imgRoadmap from "../assets/Home/imgRoadmap.svg"
 import { useNavigate } from 'react-router-dom';
-import "../styles/components/CardRoadmap.css"
+import "../styles/components/Card.css"
 
 function CardRoadmap(){
     const navigate = useNavigate();
@@ -10,20 +10,20 @@ function CardRoadmap(){
     };
 
     return(
-        <div className="cardRoadmap">
+        <div className="card">
             <div className="esquerda">
-                <h1 className="textTitulo">ROADMAP</h1>
-                <p className="textRoadmap">
+                <h1 id="item" className="titulo">ROADMAP</h1>
+                <p id="item" className="texto">
                     Com nosso gerador de roadmaps
                     você somente precisa indicar a sua
                     vaga desejada e ele irá montar um
                     plano de estudos para que você
                     possa focar somente no aprendizado.
                 </p>
-                <button onClick={handleClick} className="btnGerar">GERAR</button>
+                <button id="item" onClick={handleClick} className="btnGerar">GERAR</button>
             </div>
             <div className="direita">
-                <img src={imgRoadmap} className="imgRoadmap" alt="Imagem de Roadmap"/>
+                <img src={imgRoadmap} className="img" alt="Imagem de Roadmap" style={{ width: '75%' }}/>
             </div>
         </div>
     );

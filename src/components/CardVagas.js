@@ -1,6 +1,6 @@
 import imgVagas from "../assets/Home/imgVagas.svg"
 import { useNavigate } from 'react-router-dom';
-import "../styles/components/CardVagas.css"
+import "../styles/components/Card.css"
 
 function CardVagas(){
     const navigate = useNavigate();
@@ -10,10 +10,10 @@ function CardVagas(){
     };
     
     return(
-        <div className="cardVagas">
+        <div className="card">
             <div className="esquerda">
-                <h1>VAGAS</h1>
-                <p className="textVagas">
+                <h1 className="titulo">VAGAS</h1>
+                <p className="texto">
                     Utilizando conexão com o Chat GPT você pode informar 
                     a área que você quer trabalhar, sua experiência e ele 
                     indicará para você as melhores vagas que se encaixam para você.
@@ -21,7 +21,7 @@ function CardVagas(){
                 <button onClick={handleClick} className="btnGerar">GERAR</button>
             </div>
                 <div className="direita">
-                    <img src={imgVagas} className="imgVagas" alt="Imagem de vagas"/>
+                    <img src={imgVagas} className="img" alt="Imagem de vagas" style={{ width: '60%' }}/>
             </div>
         </div>
     );
