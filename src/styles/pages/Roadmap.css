@@ -38,3 +38,9 @@ textarea {
     color: white;
     padding: 15px 35px;
 }
+
+@media (max-width: 768px) {
+    .Roadmap{
+        padding: 1.5rem 0rem;
+    }
+}

@@ -12,7 +12,7 @@ code {
 
 @media (max-width: 768px) {
   body{
-      margin: 0.65rem 3.125rem;
-      width: 100%;
+      margin: 0.65rem 1rem;
+      width: 95%;
   }
 }

@@ -30,8 +30,40 @@ button {
     color: rgba(0, 92, 165, 1);
 }
 
+.icon{
+    display: none;
+}
+
 @media (max-width: 768px) {
     .Navbar {
         padding-bottom: 0.625rem;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+    }
+
+    .Botoes.responsive {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: brown;
+        padding-top: 50px;
+    }
+
+    .Botoes.responsive .btn {
+        display: flex;
+        background-color: aqua;
+    }
+
+    .Botoes.responsive .icon{
+        
     }
   }

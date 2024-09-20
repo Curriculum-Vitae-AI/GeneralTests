@@ -13,8 +13,8 @@ function CartaDeMotivacao(){
                     <input placeholder="Qual é a vaga?"/>
                 </div>
                 <div>
-                    <h1>Motivo</h1>
-                    <textarea placeholder="Escreva o motivo de querer esta vaga"></textarea>
+                    <h1>Experiência</h1>
+                    <textarea placeholder="Escreva sua experiência"></textarea>
                 </div>
                 
             </div>

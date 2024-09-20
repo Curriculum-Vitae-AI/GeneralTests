@@ -1,17 +1,26 @@
 import "../styles/components/Navbar.css";
 import Logo from "../assets/Logo.svg";
+import MenuFechado from "../assets/menuFechado.svg"
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+
 function Navbar(){
     const location = useLocation();
+    const [isResponsive, setIsResponsive] = useState(false);
+
+    const toggleResponsive = () => {
+        setIsResponsive(!isResponsive);
+      };
 
     return(
         <div className="Navbar">
             <button className="Logo"> 
-                <Link to="/"><img src={Logo} alt="Logo"/></Link>
+                <Link to="/DevopsTesting"><img src={Logo} alt="Logo"/></Link>
             </button>
-            <div className="Botoes">
+            <div className={`Botoes ${isResponsive ? 'responsive' : ''}`}>
+                <button className="icon" onClick={toggleResponsive}> <img src={MenuFechado} /> </button>
                 <button className={`btn ${location.pathname === '/Roadmap' ? 'active' : ''}`}>
                     <Link id="link" to="/Roadmap">ROADMAP</Link>
                 </button>
@@ -24,6 +33,7 @@ function Navbar(){
                 <button className={`btn ${location.pathname === '/SobreNos' ? 'active' : ''}`}>
                     <Link id="link" to="/SobreNos">SOBRE NÓS</Link> 
                 </button>
+                
             </div>
         </div>
     );
