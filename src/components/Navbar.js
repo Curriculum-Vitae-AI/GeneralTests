@@ -17,7 +17,7 @@ function Navbar(){
     return(
         <div className="Navbar">
             <button className="Logo"> 
-                <Link to="/DevopsTesting"><img src={Logo} alt="Logo"/></Link>
+                <Link to="/DevopsTesting"><img src={Logo} alt="Logo" className="logoCurriculum"/></Link>
             </button>
             <div className={`Botoes ${isResponsive ? 'responsive' : ''}`}>
                 <button className="icon" onClick={toggleResponsive}> <img src={MenuFechado} /> </button>
@@ -33,7 +33,7 @@ function Navbar(){
                 <button className={`btn ${location.pathname === '/SobreNos' ? 'active' : ''}`}>
                     <Link id="link" to="/SobreNos">SOBRE NÓS</Link> 
                 </button>
-                
+                <div></div>
             </div>
         </div>
     );
