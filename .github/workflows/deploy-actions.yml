@@ -24,7 +24,7 @@ jobs:
 
             cd ./GeneralTests/ &&
             git fetch &&
-            git checkout main &&
+            git checkout back-end-tests &&
             git pull &&
             pm2 restart server
             '
