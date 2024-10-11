@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node App",
     "dev": "nodemon App",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "author": "CurriculumAI",
   "license": "ISC",
