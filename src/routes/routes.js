@@ -4,7 +4,7 @@ const router = Router();
 
 router.get('/', (req, res) => {
     console.log('Oi');
-    res.send('Hello World')
+    res.send('Olá Mundo?')
     console.log('Tchau');
 });
 
