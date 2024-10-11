@@ -19,7 +19,7 @@ jobs:
           DNS: ${{ secrets.PUBLIC_DNS }}
 
         run: |
-          echo "PRIVATE_KEY" > key && chmod 600 key
+          echo -e "${PRIVATE_KEY//\\n/\n}" > key && chmod 600 key
           ssh -o StrictHostKeyChecking=no -i key ${USER}@${DNS} '
 
             cd ./GeneralTests/ &&
